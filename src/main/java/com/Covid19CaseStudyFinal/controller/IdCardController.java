@@ -37,16 +37,16 @@ public class IdCardController {
 		return idCardServiceItf.getAllIdCard();
 	}
 
-	@GetMapping("/add/panCard/{panNo}")
-	public IdCard getPanCardByNumber(@PathVariable int panNo) {
-		return idCardServiceItf.getPanCardByNumber(panNo);
-	}
-
-	@GetMapping("/add/adharCard/{adharNo}")
-	public IdCard getAdharCardByNumber(@PathVariable int adharNo) {
-		return idCardServiceItf.getAdharCardByNo(adharNo);
-
-	}
+//	@GetMapping("/add/panCard/{panNo}")
+//	public IdCard getPanCardByNumber(@PathVariable int panNo) {
+//		return idCardServiceItf.getPanCardByNumber(panNo);
+//	}
+//
+//	@GetMapping("/add/adharCard/{adharNo}")
+//	public IdCard getAdharCardByNumber(@PathVariable int adharNo) {
+//		return idCardServiceItf.getAdharCardByNo(adharNo);
+//
+//	}
 
 	@DeleteMapping("/delete/{id}")
 	public void deleteIdCard(@PathVariable int id) {

@@ -28,7 +28,7 @@ public class Appointment {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	@Column(name = "Date_Of_Booking")
 	private LocalDate dateofbooking;
-
+// vaccination center should be present one-to-one mapping
 
 
 	@Enumerated(EnumType.STRING)

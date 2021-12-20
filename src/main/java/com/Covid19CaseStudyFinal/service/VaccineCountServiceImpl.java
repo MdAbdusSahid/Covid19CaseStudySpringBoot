@@ -17,15 +17,7 @@ public class VaccineCountServiceImpl implements VaccineCountService {
 	@Override
 	public List<VaccineCount> getAllVaccine() {
 		List<VaccineCount> vaccineCount = vaccineCountRepository.findAll();
-		if (vaccineCount.isEmpty()) {
-			throw new AllException("List is empty!");
-		}
-		try {
 			return vaccineCount;
-		} catch (Exception e) {
-			throw new AllException("Something went Wrong" + e.getMessage());
-		}
-
 	}
 
 	@Override

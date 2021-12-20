@@ -181,16 +181,16 @@ public class AdminController {
 		return idCardServiceItf.addIdCard(idCard);
 	}
 
-	@GetMapping("/addid/panCard/{panNo}")
-	private IdCard getPanCardByNumber(@PathVariable("panNo") int panNo) {
-		return idCardServiceItf.getPanCardByNumber(panNo);
-	}
-
-	@GetMapping("/addid/adharCard/{adharNo}")
-	private IdCard getAdharCardByNumber(@PathVariable("adharNo") int adharNo) {
-		return idCardServiceItf.getAdharCardByNo(adharNo);
-
-	}
+//	@GetMapping("/addid/panCard/{panNo}")
+//	private IdCard getPanCardByNumber(@PathVariable("panNo") int panNo) {
+//		return idCardServiceItf.getPanCardByNumber(panNo);
+//	}
+//
+//	@GetMapping("/addid/adharCard/{adharNo}")
+//	private IdCard getAdharCardByNumber(@PathVariable("adharNo") int adharNo) {
+//		return idCardServiceItf.getAdharCardByNo(adharNo);
+//
+//	}
 
 	/*----------------------------------------------Member--------------------------------------------------------------*/
 
@@ -201,7 +201,7 @@ public class AdminController {
 
 	@PutMapping("/adminmemberput/{id}")
 	public Member updateMember(@PathVariable int id, @RequestBody Member member) {
-		return memberserviceItf.updateMember(id, member);
+		return memberserviceItf.updateMember(member);
 	}
 
 	@DeleteMapping("/adminmemberdelete/{id}")
@@ -277,11 +277,11 @@ public class AdminController {
 
 	}
 
-	@DeleteMapping("/deletevr")
-	private void deleteVaccineRegistration(@RequestBody VaccineRegistration vaccineRegistration) {
+	@DeleteMapping("/delete/{mobileno}")
+	private void deleteVaccineRegistration(@PathVariable long mobileno) {
 
-		vaccineRegistrationService.deleteVaccineRegistration(vaccineRegistration);
-
+		 vaccineRegistrationService.deleteVaccineRegistration(mobileno);
+		
 	}
 
 	@GetMapping("/vaccineRegistration/{mobileno}")

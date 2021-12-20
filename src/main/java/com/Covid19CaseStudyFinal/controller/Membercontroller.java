@@ -27,9 +27,9 @@ public class Membercontroller {
 		return memberserviceItf.addMember(member);
 	}
 
-	@PutMapping("/put/{id}")
-	public Member updateMember(@PathVariable int id, @RequestBody Member member) {
-		return memberserviceItf.updateMember(id, member);
+	@PutMapping("/put")
+	public Member updateMember(@RequestBody Member member) {
+		return memberserviceItf.updateMember( member);
 	}
 
 	@DeleteMapping("/delete/{id}")

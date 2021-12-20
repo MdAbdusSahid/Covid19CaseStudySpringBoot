@@ -2,6 +2,8 @@ package com.Covid19CaseStudyFinal.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -12,6 +14,7 @@ public class VaccinationCenter {
 	
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int code;
 
 	private String centername;
@@ -20,11 +23,6 @@ public class VaccinationCenter {
 	private String state;
 	private	String pincode;
 	
-		/*@OneToOne(cascade = CascadeType.ALL)
-	private Appointment appointment;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	private VaccineInventory vaccineInventory;*/
 	
 	public VaccinationCenter() {
 		super();
@@ -39,8 +37,7 @@ public class VaccinationCenter {
 		this.city = city;
 		this.state = state;
 		this.pincode = pincode;
-		/*this.appointment=appointment;
-		this.vaccineInventory=vaccineInventory;*/
+	
 	}
 	
 	public int getCode() {
@@ -81,19 +78,7 @@ public class VaccinationCenter {
 	}
 	
 
-		/*public Appointment getAppointment() {
-		return appointment;
-	}
-	public void setAppointment(Appointment appointment) {
-		this.appointment = appointment;
-	}
-	
-	public VaccineInventory getVaccineInventory() {
-		return vaccineInventory;
-	}
-	public void setVaccineInventory(VaccineInventory vaccineInventory) {
-	this.vaccineInventory = vaccineInventory;
-	}*/
+		
 	
 	@Override
 	public String toString() {

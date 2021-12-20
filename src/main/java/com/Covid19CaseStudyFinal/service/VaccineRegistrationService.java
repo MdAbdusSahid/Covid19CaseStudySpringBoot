@@ -13,7 +13,7 @@ public interface VaccineRegistrationService {
 	
 	public VaccineRegistration updateVaccineRegistration (VaccineRegistration reg);
 	
-	public void deleteVaccineRegistration (VaccineRegistration reg);
+	public void deleteVaccineRegistration (long mobileno);
 	
 	public VaccineRegistration getVaccineRegistration (long mobileno);
 	

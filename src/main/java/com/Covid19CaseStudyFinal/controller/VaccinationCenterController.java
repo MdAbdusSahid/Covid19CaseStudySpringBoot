@@ -34,7 +34,7 @@ public class VaccinationCenterController {
 
 	}
 
-	@DeleteMapping("/delete")
+	@DeleteMapping("/delete/{code}")
 	public void deleteVaccineCenter(@PathVariable int code) {
 		service.deleteVaccineCenter(code);
 

@@ -27,7 +27,7 @@ public class MemberServiceImpl implements MemberserviceItf {
 	}
 
 	@Override
-	public Member updateMember(int id, Member member) {
+	public Member updateMember(Member member) {
 		// return memberRepository.save(member);
 		try {
 			return memberRepository.save(member);

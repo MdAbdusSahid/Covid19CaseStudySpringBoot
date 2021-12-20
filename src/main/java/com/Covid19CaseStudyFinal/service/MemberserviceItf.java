@@ -10,7 +10,7 @@ import com.Covid19CaseStudyFinal.entity.Member;
 public interface MemberserviceItf {
 	public Member addMember(Member member);
 
-	public Member updateMember(int id, Member member);
+	public Member updateMember(Member member);
 
 	public boolean deleteMember(int id);
 

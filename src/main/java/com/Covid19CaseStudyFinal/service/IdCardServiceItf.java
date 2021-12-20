@@ -12,7 +12,7 @@ public interface IdCardServiceItf {
 	public IdCard updateIdCard(IdCard idcard);
 	public void deleteIdCard(int id);
 	public List<IdCard> getAllIdCard();
-	public IdCard getPanCardByNumber(int panNo);
-	public IdCard getAdharCardByNo(int adharno);
+	//public IdCard getPanCardByNumber(int panNo);
+	//public IdCard getAdharCardByNo(long adharno);
 	public IdCard getIdCardById(int id);
 }

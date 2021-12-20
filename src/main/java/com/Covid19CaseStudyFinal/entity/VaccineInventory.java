@@ -2,8 +2,11 @@ package com.Covid19CaseStudyFinal.entity;
 
 import java.time.LocalDate;
 
+import javax.annotation.Generated;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -12,6 +15,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 
 public class VaccineInventory {
+	
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private int id;
 

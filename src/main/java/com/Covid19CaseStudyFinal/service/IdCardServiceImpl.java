@@ -20,15 +20,15 @@ public class IdCardServiceImpl implements IdCardServiceItf {
 
 	}
 
-	public IdCard getPanCardByNumber(int panNo) {
-		return idCardRepository.getById(panNo);
-
-	}
-
-	public IdCard getAdharCardByNo(int adharno) {
-		return idCardRepository.getById(adharno);
-
-	}
+//	public IdCard getPanCardByNumber(int panNo) {
+//		return idCardRepository.getById(panNo);
+//
+//	}
+//
+//	public IdCard getAdharCardByNo(int adharno) {
+//		return idCardRepository.getById(adharno);
+//
+//	}
 
 	@Override
 	public IdCard updateIdCard(IdCard idcard) {

@@ -35,10 +35,10 @@ public class VaccineRegistrationController {
 		
 	}
 
-	@DeleteMapping("/delete")
-	private void deleteVaccineRegistration(@RequestBody VaccineRegistration vaccineRegistration) {
+	@DeleteMapping("/delete/{mobileno}")
+	private void deleteVaccineRegistration(@PathVariable long mobileno) {
 
-		 vaccineRegistrationService.deleteVaccineRegistration(vaccineRegistration);
+		 vaccineRegistrationService.deleteVaccineRegistration(mobileno);
 		
 	}
 	@GetMapping("/vaccineRegistration/{mobileno}")

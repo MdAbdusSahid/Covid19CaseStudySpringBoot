@@ -3,6 +3,8 @@ package com.Covid19CaseStudyFinal.entity;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,6 +22,8 @@ allocationSize=1
 generator = "ID_SEQUENCE"
 )*/
 
+
+@GeneratedValue(strategy = GenerationType.AUTO)
 @Id
 private int id;
 public IdCard() {
@@ -34,14 +38,15 @@ private String address;
 private String city;
 private String state;
 private String pincode;
-private int adharNo;
+private long adharNo;
 private String panNo;
 
 
+
 public IdCard(int id, String name, LocalDate dob, String gender, String address, String city, String state,
-String pincode, int adharNo, String panNo) {
+String pincode, long adharNo, String panNo) {
 super();
-this.id = id;
+this.id=id;
 this.name = name;
 this.dob = dob;
 this.gender = gender;
@@ -53,10 +58,10 @@ this.adharNo = adharNo;
 this.panNo = panNo;
 }
 public int getId() {
-return id;
+	return id;
 }
 public void setId(int id) {
-this.id = id;
+	this.id = id;
 }
 public String getName() {
 return name;
@@ -100,10 +105,10 @@ return pincode;
 public void setPincode(String pincode) {
 this.pincode = pincode;
 }
-public int getAdharNo() {
+public long getAdharNo() {
 return adharNo;
 }
-public void setAdharNo(int adharNo) {
+public void setAdharNo(long adharNo) {
 this.adharNo = adharNo;
 }
 public String getPanNo() {

@@ -45,19 +45,6 @@ public class VaccineRegistrationServiceImpl implements VaccineRegistrationServic
 		
 		
 	}
-
-	@Override
-	public void deleteVaccineRegistration(VaccineRegistration reg) {
-		try{
-			 vaccineRegistrationRepository.delete(reg);
-		}
-		catch(IllegalArgumentException e) {
-			throw new ServiceBookingException("Given registration Id is empty,please check");
-		}
-		catch(java.util.NoSuchElementException e) {
-			throw new ServiceBookingException("Given registration Id is doesn't exit in database"+e.getMessage());
-		}
-	} 
 	
 
 	@Override
@@ -76,6 +63,12 @@ public class VaccineRegistrationServiceImpl implements VaccineRegistrationServic
 	public List<VaccineRegistration> getAllVaccineRegistrations() {
 		return vaccineRegistrationRepository.findAll();
 		 
+		
+	}
+
+	@Override
+	public void deleteVaccineRegistration(long mobileno) {
+		vaccineRegistrationRepository.deleteById(mobileno);;
 		
 	}
 
